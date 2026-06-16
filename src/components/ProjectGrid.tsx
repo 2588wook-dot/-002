@@ -21,7 +21,7 @@ export default function ProjectGrid({
         {/* Top Header fitted perfectly to theme style */}
         <header className="mb-12 md:mb-16 flex items-center justify-between border-b border-[#E5E5E2] pb-6">
           <div className="flex flex-col">
-            <h1 className="text-[11px] font-semibold tracking-[0.25em] uppercase text-neutral-900 opacity-80">
+            <h1 className="text-[18px] font-semibold tracking-[0.25em] uppercase text-neutral-900 opacity-80">
               OUR WORK
             </h1>
           </div>
