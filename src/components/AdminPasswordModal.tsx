@@ -33,8 +33,8 @@ export default function AdminPasswordModal({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Retrieve stored password, default to '7777'
-    const stored = localStorage.getItem("ourwork_admin_password") || "7777";
+    // Retrieve stored password, default to '0000'
+    const stored = localStorage.getItem("ourwork_admin_password") || "0000";
 
     if (password === stored) {
       setError("");
@@ -75,7 +75,8 @@ export default function AdminPasswordModal({
           </h3>
           
           <p className="text-[11px] text-neutral-400 mt-1 max-w-[240px]">
-            관리자 화면에 진입하려면 설정된 비밀번호를 입력해 주세요.
+            관리자 화면에 진입하려면 설정된 비밀번호를 입력해 주세요.<br />
+            <span className="text-neutral-500 font-medium">(초기 비밀번호: 0000)</span>
           </p>
         </div>
 

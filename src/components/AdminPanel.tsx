@@ -80,7 +80,7 @@ export default function AdminPanel({
   // Initialize
   useEffect(() => {
     // Sort projects according to current order
-    const sorted = [...projects].sort((a, b) => (a.order || 0) - (b.order || 0));
+    const sorted = [...projects].sort((a, b) => a.order - b.order);
     setTempProjects(sorted);
   }, [projects]);
 
@@ -471,7 +471,7 @@ export default function AdminPanel({
                   </h3>
                 </div>
                 <p className="text-[11px] text-neutral-400 font-sans mb-4">
-                  관리자 페이지 진입 비밀번호를 변경할 수 있습니다.
+                  관리자 페이지 진입 비밀번호를 변경할 수 있습니다. (기본 비밀번호: 0000)
                 </p>
                 <form onSubmit={handleChangePassword} className="space-y-3 max-w-sm">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">

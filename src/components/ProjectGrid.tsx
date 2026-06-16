@@ -13,7 +13,7 @@ export default function ProjectGrid({
   onOpenAdmin,
 }: ProjectGridProps) {
   // Sort projects by order ascending
-  const sortedProjects = [...projects].sort((a, b) => (a.order || 0) - (b.order || 0));
+  const sortedProjects = [...projects].sort((a, b) => a.order - b.order);
 
   return (
     <div className="min-h-screen bg-[#F9F9F7] px-6 py-8 md:px-12 md:py-12 flex flex-col justify-between relative selection:bg-neutral-200">

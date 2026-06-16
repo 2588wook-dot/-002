@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Project } from "./types";
 import { INITIAL_PROJECTS } from "./data";
 import ProjectGrid from "./components/ProjectGrid";
@@ -28,16 +28,6 @@ export default function App() {
     }
     return INITIAL_PROJECTS;
   });
-
-  // Ensure that the database / localStorage always has a copy of either initial or edited data, and password defaults
-  useEffect(() => {
-    if (!localStorage.getItem("ourwork_portfolio_projects")) {
-      localStorage.setItem("ourwork_portfolio_projects", JSON.stringify(projects));
-    }
-    if (!localStorage.getItem("ourwork_admin_password")) {
-      localStorage.setItem("ourwork_admin_password", "7777");
-    }
-  }, [projects]);
 
   // Save projects change to state and localStorage
   const handleSaveProjects = (updatedProjects: Project[]) => {
